@@ -1,0 +1,12 @@
+.Pacient{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 10vh;
+}
+.Pacient h4{
+    margin-top: 0;
+}

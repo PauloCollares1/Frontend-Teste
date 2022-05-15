@@ -1,0 +1,19 @@
+.DoctorForm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 1vh;
+}
+.DoctorForm_form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.DoctorForm_form input{
+    width: 50vh;
+    height: 25px;
+}

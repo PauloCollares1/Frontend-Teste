@@ -1,0 +1,43 @@
+
+.Header{  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: #59a78273;
+    margin-top: 2vh;
+    width: 100%;
+
+    border: solid 1px #95f1dd73;
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+}
+
+.Header span{
+    background-color: #59a7839c;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: larger;
+    margin-left: 5px;
+    padding: 7px; 
+}
+
+.Header_list{
+    display: flex;  
+    flex-wrap: wrap;  
+}
+
+.Header_list li{
+    color: whitesmoke;
+    margin-right: 20px;
+    margin-left: 20px;
+    list-style: none; 
+}
+
+/* ----- Animação ----- */
+
+.Header span:hover{
+    background-color: #59a783d2;
+    transition: 0.5s;
+}

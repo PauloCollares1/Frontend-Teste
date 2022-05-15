@@ -1,0 +1,44 @@
+.Home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 10vh;
+}
+.Home div{
+    margin-bottom: 3vh;
+}
+.Home button{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 50vh;
+    height: 45px;
+    color: black;
+    border-radius: 15px;
+}
+.Home_doctor_button{
+    background-color: #023bf84d;
+}
+.Home_pacient_button{
+    background-color: #e402f82d;
+}
+
+/* ----- Animação ----- */
+
+.Home_doctor_button:hover{
+    background-color: #023bf88d;
+    cursor: pointer;
+    transition: 1s;
+    height: 50px;
+    width: 55vh;
+}
+.Home_pacient_button:hover{
+    background-color: #e402f84d;
+    cursor: pointer;
+    transition: 1s;
+    height: 50px;
+    width: 55vh;
+}
