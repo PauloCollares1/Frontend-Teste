@@ -17,10 +17,10 @@ export const Header = () => {
         <nav>
           <ul className="Header_list">
             <li>
-              <Link to='https://github.com/PauloCollares1'><SiGithub size={30}/></Link>
+              <a href='https://github.com/PauloCollares1'><SiGithub size={30}/></a>
             </li>
             <li>
-              <Link to='https://www.linkedin.com/in/paulo-collares/' style={{ textDecoration: 'none' }}><SiLinkedin size={30} /></Link>
+              <a href='https://www.linkedin.com/in/paulo-collares/' style={{ textDecoration: 'none' }}><SiLinkedin size={30} /></a>
             </li>
           </ul>
         </nav>
