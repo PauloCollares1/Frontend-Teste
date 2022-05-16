@@ -36,9 +36,6 @@ export const DoctorForm = () => {
                 return setShowExam(true);
             }       
         })
-        if(showexam === false){
-            alert('Login ou senha incorretos - Tente novamente');
-        }
     }
 
     function onSubmit(event){

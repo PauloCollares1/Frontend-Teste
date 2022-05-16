@@ -46,9 +46,6 @@ export const PacientForm = () => {
                 return setShowExam(true);
             }
         })
-        if(showexam === false){
-            alert('Login ou senha incorretos');
-        }
     }
 
     function onSubmit(event){
