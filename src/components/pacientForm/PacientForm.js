@@ -66,7 +66,7 @@ export const PacientForm = () => {
                 <input type='submit' className='form_buttom_pacient' value='Agendar/Conferir consultas'/>
                 <Link to='/newpacient'><input type='submit' className='form_buttom_pacient' value='Eu ainda não me cadastrei!' /></Link>
             </form>
-            {!showexam ? <></>: <Clientappointment email={email} name={name} doctors={doctors}/>}
+            {!showexam ? <p>Você não está logado</p>: <Clientappointment email={email} name={name} doctors={doctors}/>}
         </div>
     )
 }

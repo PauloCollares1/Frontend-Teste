@@ -25,7 +25,7 @@ export const Home = () => {
         <br />
         <br />
         <br />
-        <Link to='/pacient'><button className='Home_pacient_button'>Eu sou <b>Paciente</b></button></Link>
+        <Link to='/pacient'><button className='Home_pacient_button'>Eu sou <b>Paciente</b></button></Link> 
         <br />
     </div>
   )

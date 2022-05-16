@@ -56,7 +56,7 @@ export const DoctorForm = () => {
                 <input  type='submit' className='form_buttom' value='Conferir consultas!'/>
                 <Link to='/newdoctor'><input type='submit' className='form_buttom' value='Médico(a) não registrado!' /></Link>
             </form>
-            {!showexam ? <></>: <Doctorappointment crm={crm} />}
+            {!showexam ? <p>Você não está logado</p>: <Doctorappointment crm={crm} />}
         </div>
     )
 }
