@@ -7,7 +7,7 @@ import axios from 'axios';
 import './Newpaciente.css';
 
 
-const url = 'http://localhost:5000/addclient';
+const url = 'https://fast-gorge-46895.herokuapp.com/addclient';
 
 
 export const Newpacient = () => {
