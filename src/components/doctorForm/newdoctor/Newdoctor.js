@@ -10,7 +10,7 @@ import React from 'react'
 import './Newdoctor.css';
 
 
-const url = 'http://localhost:5000/addmedic';
+const url = 'https://fast-gorge-46895.herokuapp.com/addmedic';
 
 
 export const Newdoctor = () => {

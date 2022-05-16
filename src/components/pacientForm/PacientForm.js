@@ -10,8 +10,8 @@ import axios from 'axios';
 import './PacientForm.css'
 
 
-const url_client = 'http://localhost:5000/clientsapi';
-const url_doctor = 'http://localhost:5000/doctorsapi';
+const url_client = 'https://fast-gorge-46895.herokuapp.com/clientsapi';
+const url_doctor = 'https://fast-gorge-46895.herokuapp.com/doctorsapi';
 
 
 export const PacientForm = () => {

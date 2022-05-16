@@ -6,7 +6,7 @@ import axios from 'axios';
 import './Newclientappointment.css';
 
 
-const url_new_appoitment = 'http://localhost:5000/addappointment';
+const url_new_appoitment = 'https://fast-gorge-46895.herokuapp.com/addappointment';
 
 
 export const NewClientAppoitment = ({email, name, doctors}) => {

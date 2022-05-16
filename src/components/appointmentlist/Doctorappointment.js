@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export const Doctorappointment = ({crm}) => {
 
-    const url_one_doctor = `http://localhost:5000/appointmentdoctor/${crm}`;
+    const url_one_doctor = `https://fast-gorge-46895.herokuapp.com/appointmentdoctor/${crm}`;
 
     const [appointments, setAppointments] = useState();
 

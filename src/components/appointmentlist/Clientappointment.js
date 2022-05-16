@@ -13,7 +13,7 @@ import './appointmentlist.css';
 
 export const Clientappointment = ({email, name, doctors}) => {
 
-    const url_one_client = `http://localhost:5000/appointmentclient/${email}`;
+    const url_one_client = `https://fast-gorge-46895.herokuapp.com/appointmentclient/${email}`;
     const [appointments, setAppointments] = useState();
 
     useEffect(() => {
