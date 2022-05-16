@@ -23,19 +23,22 @@ export const Doctorappointment = ({crm}) => {
     return (
         <div>
             {(appointments < 1)||(!appointments) ?
-                (<p>Você ainda não possui nenhuma consulta agendada</p>) : 
-                (<div> 
-                    {
-                        appointments.map((appointment) => (
-                            <div key={appointment._id}>
-                                <p>Doutor(a): {appointment.db_name_doctor}</p>
-                                <p>você tem uma consulta marcada com: {appointment.db_name_client}</p>
-                                <p>contato cliente: {appointment.db_email_client}</p>
-                                <p>cliente se queixa de: {appointment.db_infos}</p> 
-                                <p>A consulta será No dia {appointment.db_date} - {appointment.db_time} horas</p>
-                            </div>
-                        ))
-                    }
+                (<p>Você ainda não possui nenhuma consulta agendada</p>)
+                :
+                (<div className='appoitmentlist_card_grandpa'>
+                    <h3>Dr(a) aqui estão suas consultas agendadas, Bom trabalho!</h3>
+                    <div className='appoitmentlist_card_dad'>
+                        {
+                            appointments.map((appointment) => (
+                                <div key={appointment._id} className='appoitmentlist_card'>
+                                    <p>Paciente: <b>{appointment.db_name_client}</b>,<br />
+                                    Contato cliente: <b>{appointment.db_email_client}</b><br />
+                                    cliente se queixa de:<br />{appointment.db_infos}<br />
+                                    A consulta será No dia <b>{appointment.db_date} </b> - <b>{appointment.db_time}</b> horas</p>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>) 
             }
         </div>

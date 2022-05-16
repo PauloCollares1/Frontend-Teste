@@ -1,16 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-import axios from 'axios';
+// External imports
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
+// Files imports
+import { useState } from 'react';
+import React from 'react'
+
+// CSS
+import './Newdoctor.css';
 
 
 const url = 'http://localhost:5000/addmedic';
 
+
 export const Newdoctor = () => {
 
+    const [crm, setCrm] = useState();
     const[name, setName] = useState();
     const[email, setEmail] = useState();
-    const [crm, setCrm] = useState();
     const[password, setPassword] = useState();
     const[specialty, setSpecialty] = useState();
 
@@ -23,6 +30,7 @@ export const Newdoctor = () => {
             html_specialty: specialty
         });
     }
+
     function onSubmit(event){
         event.preventDefault();
         console.log("--------------------")
@@ -37,22 +45,23 @@ export const Newdoctor = () => {
     function grabPassword(event){setPassword(event.target.value)}
     function grabspecialty(event){setSpecialty(event.target.value)}
 
-  return (
-    <div>  
-        <h3>Área de cadastro exclusiva para médicos(as)</h3>  
-        <form onSubmit={onSubmit}>
-            <input type='text' name='html_name' placeholder='Nome' onChange={grabName}/>
-            <input type='email' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
-            <input type='text' name='html_crm' placeholder='CRM' onChange={grabCrm}/>
-            <input type='pass' name='html_password' placeholder='Senha' onChange={grabPassword}/>
-            <select name="select" onChange={grabspecialty}>
-                <option value="pediatra" name='html_specialty'>Pediatria</option>
-                <option value="cardiologia" name='html_specialty' >cardiologia</option>
-                <option value="generalista" name='html_specialty' >Generalista</option>
-            </select>
-            <input type='submit' value='Cadastrar'/>
-        </form>
-        <Link to='/doctor'><button>Voltar para Consultas</button></Link>
-    </div>
-  )
+    return (
+        <div className="Newdoctor">  
+            <h1>Área de cadastro exclusiva para médicos(as)</h1>  
+            <form onSubmit={onSubmit} className='Newdoctor_form'>
+                <input type='text' className='form_input' name='html_name' placeholder='Nome' onChange={grabName}/>
+                <input type='email' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
+                <input type='text' className='form_input' name='html_crm' placeholder='CRM' onChange={grabCrm}/>
+                <input type='pass' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
+                <select name="select" className='form_select' placeholder='aaa' onChange={grabspecialty}>
+                    <option value="Sem especialidade" name='html_specialty'>Selecione uma especialidade médica</option>
+                    <option value="pediatra" name='html_specialty'>Pediatria</option>
+                    <option value="cardiologia" name='html_specialty' >cardiologia</option>
+                    <option value="generalista" name='html_specialty' >Generalista</option>
+                </select>
+                <input type='submit' className='form_buttom' value='Cadastrar'/>
+            </form>
+            <Link to='/doctor'><button>Voltar para Consultas</button></Link>
+        </div>
+    )
 }

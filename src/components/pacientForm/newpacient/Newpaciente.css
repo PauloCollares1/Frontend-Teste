@@ -1,0 +1,48 @@
+.Newpacient{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 10vh;
+}
+.Newpacient_form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.Newpacient_form input{
+    margin: 0;
+    border: 1;
+    padding: 0;
+    font-size: large;
+    text-align: center;
+    width: 50vh;
+    height: 30px;
+    margin-bottom: 3vh;
+    border-radius: 15px;   
+}
+input.form_buttom_pacient{
+    background-color: #e402f81d;
+}
+
+/* ----- Animação ----- */
+
+input.form_buttom_pacient:hover{
+    background-color: #e402f88d;
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:hover{
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:focus{
+    border: solid 2px #95f1a4b2;
+}

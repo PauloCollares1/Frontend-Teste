@@ -1,12 +1,15 @@
 // External imports
-import React from 'react'
-import axios from 'axios';
-import { useState } from 'react';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import React from 'react';
+import axios from 'axios';
 
+// CSS
+import './Newpaciente.css';
 
 
 const url = 'http://localhost:5000/addclient';
+
 
 export const Newpacient = () => {
 
@@ -36,13 +39,14 @@ export const Newpacient = () => {
     function grabPassword(event){setPassword(event.target.value)}
 
   return (
-    <div>    
-        <h3>Área de cadastro exclusiva para clientes</h3>  
-        <form onSubmit={onSubmit}>
-            <input type='text' name='html_name' placeholder='Nome' onChange={grabName}/>
-            <input type='email' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
-            <input type='pass' name='html_password' placeholder='Senha' onChange={grabPassword}/>
-            <input type='submit' value='Cadastrar'/>
+    <div className='Newpacient'>    
+        <h1>Área de cadastro exclusiva para clientes</h1>
+        <h3>Faça seu cadastro para poder marcar uma consulta</h3>
+        <form onSubmit={onSubmit} className='Newpacient_form'>
+            <input type='text' className='form_input' name='html_name' placeholder='Nome' onChange={grabName}/>
+            <input type='email' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
+            <input type='pass' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
+            <input type='submit' className='form_buttom_pacient' value='Cadastrar'/>
         </form>
         <Link to='/pacient'><button>Voltar para consultas</button></Link>
     </div>

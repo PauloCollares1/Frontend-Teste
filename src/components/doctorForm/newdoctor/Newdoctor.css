@@ -1,0 +1,68 @@
+.Newdoctor{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 10vh;
+}
+.Newdoctor_form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.Newdoctor_form input{
+    padding: 0;
+    margin: 0;
+    border: 1;
+    text-align: center;
+    font-size: large;
+    width: 50vh;
+    height: 30px;
+    margin-bottom: 3vh;
+    border-radius: 15px;   
+}
+
+.form_select {
+    border-radius: 15px;
+    width: 350px;
+    height: 35px;
+    margin-bottom: 3vh;
+    padding: 5px;
+}
+.form_select option{
+    border-radius: 15px;
+    width: 350px;
+    height: 35px;
+    margin-bottom: 3vh;
+    padding: 5px;
+    text-align: center;
+}
+.form_select:hover {
+    cursor: pointer;
+}
+input.form_buttom{
+    background-color: #0281f82a;
+}
+
+/* ----- Animação ----- */
+
+input.form_buttom:hover{
+    background-color: #023bf88d;
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:hover{
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:focus{
+    border: solid 2px #95f1dd73;
+}
+

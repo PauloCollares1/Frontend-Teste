@@ -14,6 +14,36 @@
     flex-direction: column;
 }
 .DoctorForm_form input{
+    padding: 0;
+    margin: 0;
+    border: 1;
+    text-align: center;
+    font-size: large;
     width: 50vh;
-    height: 25px;
+    height: 30px;
+    margin-bottom: 3vh;
+    border-radius: 15px;   
 }
+input.form_buttom{
+    background-color: #0281f82a;
+}
+
+/* ----- Animação ----- */
+
+input.form_buttom:hover{
+    background-color: #023bf88d;
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:hover{
+    cursor: pointer;
+    transition: 1s;
+    height: 35px;
+    width: 55vh;
+}
+.form_input:focus{
+    border: solid 2px #95f1dd73;
+}
+

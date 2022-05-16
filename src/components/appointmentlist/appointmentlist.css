@@ -1,0 +1,30 @@
+.appoitmentlist_card_grandpa{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.appoitmentlist_card_dad{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    text-align: justify;
+}
+.appoitmentlist_card{
+    display: flex;
+    flex-wrap: wrap;
+
+    border: solid 1px;
+    border-radius: 15px;
+    border-color: #0281f82a;
+
+    background-color: #59a78328;
+    
+    width: 35vw;
+    margin: 5px;
+    padding: 5px;
+    min-width: 200px;
+    max-width: 400px;
+    max-height: 400px;
+}

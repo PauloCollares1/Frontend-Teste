@@ -20,10 +20,10 @@
     border-radius: 15px;
 }
 .Home_doctor_button{
-    background-color: #023bf84d;
+    background-color: #0281f82a;
 }
 .Home_pacient_button{
-    background-color: #e402f82d;
+    background-color: #e402f81d;
 }
 
 /* ----- Animação ----- */
@@ -36,7 +36,7 @@
     width: 55vh;
 }
 .Home_pacient_button:hover{
-    background-color: #e402f84d;
+    background-color: #e402f88d;
     cursor: pointer;
     transition: 1s;
     height: 50px;

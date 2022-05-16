@@ -1,7 +1,6 @@
 // Files imports
 import { PacientForm } from '../../components/pacientForm/PacientForm';
 
-
 // External imports
 import { Link } from "react-router-dom";
 import React from 'react';
