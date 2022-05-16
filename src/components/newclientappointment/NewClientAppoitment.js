@@ -35,17 +35,26 @@ export const NewClientAppoitment = ({email, name, doctors}) => {
  
     return (
         <div className='NewClientAppoitment'>
-            <h3>E aí {name}! Você precisa de uma nova consulta ?</h3>
+            <h3>E aí {name}! Você precisa de uma nova consulta ? veja os médicos(as) disponíveis</h3>
             <form className='NewClientAppoitment_form'>
                 {
                     doctors.map((doctor) => (
                         <div key={doctor._id} className='NewClientAppoitment_form_card'>
-                            <p>Especialidade: {doctor.db_specialty}</p>
-                            <p>Nome: {doctor.db_name}</p>
-                            <p>CRM: {doctor.db_crm}</p>
+                            <p>Especialidade: <b>{doctor.db_specialty}</b></p>
+                            <p>Doutor(a): <b>{doctor.db_name}</b></p>
+                            <p>CRM: <b>{doctor.db_crm}</b></p>
+                            <p>Data e horario desejado ?</p>
                             <input type='date' name='minhadata' onChange={grabDate}/>
-                            <input type='time' name='meuTime' onChange={grabTime}/>
-                            <textarea onChange={grabinfo} placeholder='inform o problema em até 50 caractéres'  maxLength='50'/>
+                            <select name="select" className='select_input' onChange={grabTime}>
+                                <option value="08:00" name='hora'>08:00</option>
+                                <option value="09:00" name='hora'>09:00</option>
+                                <option value="10:00" name='hora'>10:00</option>
+                                <option value="11:00" name='hora'>11:00</option>
+                                <option value="14:00" name='hora'>14:00</option>
+                                <option value="15:00" name='hora'>15:00</option>
+                            </select>
+                            <p>O que você está sentindo ?</p>
+                            <textarea onChange={grabinfo} placeholder='informe o problema em até 50 caracteres'  maxLength='50' minLength='1'/>
                             <input type='submit' onClick={ () => saveNewAppoitment(doctor.db_crm, doctor.db_name, doctor.db_specialty, date, time)} value='Agendar!'/>
                         </div>
                     ))

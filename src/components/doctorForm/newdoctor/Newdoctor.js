@@ -35,7 +35,8 @@ export const Newdoctor = () => {
         event.preventDefault();
         console.log("--------------------")
         console.log(name +' - '+ password + ' - ' + email)
-        saveNewDoctor()
+        saveNewDoctor();
+        alert('Cadastro realizado com sucesso! realize seu primeiro login');
         window.location.pathname = '/doctor'
     }
 
@@ -52,7 +53,7 @@ export const Newdoctor = () => {
                 <input type='text' className='form_input' name='html_name' placeholder='Nome' onChange={grabName}/>
                 <input type='email' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
                 <input type='text' className='form_input' name='html_crm' placeholder='CRM' onChange={grabCrm}/>
-                <input type='pass' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
+                <input type='password' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
                 <select name="select" className='form_select' placeholder='aaa' onChange={grabspecialty}>
                     <option value="Sem especialidade" name='html_specialty'>Selecione uma especialidade médica</option>
                     <option value="pediatra" name='html_specialty'>Pediatria</option>

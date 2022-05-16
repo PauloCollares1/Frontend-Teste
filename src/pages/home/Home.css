@@ -21,9 +21,15 @@
 }
 .Home_doctor_button{
     background-color: #0281f82a;
+    font-size: large;
 }
 .Home_pacient_button{
     background-color: #e402f81d;
+    font-size: large;
+}
+.heart{
+    color: red;
+    font-size: 60px;
 }
 
 /* ----- Animação ----- */

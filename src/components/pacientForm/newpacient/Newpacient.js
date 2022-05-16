@@ -31,6 +31,7 @@ export const Newpacient = () => {
         console.log("--------------------");
         console.log(name +' - '+ password + ' - ' + email);
         saveNewClient()
+        alert('Cadastro realizado com sucesso! realize seu primeiro login');
         window.location.pathname = '/pacient'
     }
 
@@ -45,7 +46,7 @@ export const Newpacient = () => {
         <form onSubmit={onSubmit} className='Newpacient_form'>
             <input type='text' className='form_input' name='html_name' placeholder='Nome' onChange={grabName}/>
             <input type='email' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
-            <input type='pass' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
+            <input type='password' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
             <input type='submit' className='form_buttom_pacient' value='Cadastrar'/>
         </form>
         <Link to='/pacient'><button>Voltar para consultas</button></Link>

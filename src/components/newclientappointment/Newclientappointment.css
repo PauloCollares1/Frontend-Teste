@@ -31,3 +31,32 @@
     min-width: 200px;
     max-width: 400px;
 }
+.NewClientAppoitment_form_card input, textarea{
+    width: 60%;
+    min-width: 30%;
+    max-width: 70%;
+    max-height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.select_input{
+    width: 60%;
+    min-width: 30%;
+    max-width: 70%;
+    max-height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.select_input option{
+    text-align: center;
+}
+.NewClientAppoitment_form_card input, textarea::placeholder{
+    text-align: center;
+}
+.NewClientAppoitment_form_card input:hover, textarea:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #59a78273;
+}
