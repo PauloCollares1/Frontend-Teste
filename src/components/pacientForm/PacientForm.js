@@ -22,6 +22,9 @@ export const PacientForm = () => {
     const[doctors, setDoctors] = useState();
     const[password, setPassword] = useState();
     const[showexam, setShowExam] = useState(false);
+
+    function grabEmail(event){setEmail(event.target.value)}
+    function grabPassword(event){setPassword(event.target.value)}
         
     useEffect(() => {
         axios.get(url_client)
@@ -36,34 +39,34 @@ export const PacientForm = () => {
             });
     }, [url_doctor]); 
 
+    function checkUser(){
+        clients.map((client) => {
+            if(client.db_email === email && client.db_password === password){
+                setName(client.db_name);
+                return setShowExam(true);
+            }
+        })
+        if(showexam === false){
+            alert('Login ou senha incorretos');
+        }
+    }
+
     function onSubmit(event){
         event.preventDefault();
         console.log("--------------------")
         console.log(email +' - '+ password)
-        checkUser(clients, email, password);
+        checkUser();
     }
-
-    function grabEmail(event){setEmail(event.target.value)}
-    function grabPassword(event){setPassword(event.target.value)}
     
-    function checkUser(clients, email, password){
-        clients.map((client) => {
-            if(client.db_email === email && client.db_password === password){
-                setName(client.db_name);
-                setShowExam(true);
-            }
-        })
-    }
-
     return (
         <div className='PacientForm'>
             <form onSubmit={onSubmit} className='PacientForm_form'>
-                <input type='text' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail}/>
-                <input type='password' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword}/>
+                <input type='text' className='form_input' name='html_email' placeholder='E-mail' onChange={grabEmail} required maxLength='50'/>
+                <input type='password' className='form_input' name='html_password' placeholder='Senha' onChange={grabPassword} required maxLength='50'/>
                 <input type='submit' className='form_buttom_pacient' value='Agendar/Conferir consultas'/>
                 <Link to='/newpacient'><input type='submit' className='form_buttom_pacient' value='Eu ainda não me cadastrei!' /></Link>
             </form>
-            {!showexam ? <p>não vejo nada</p>: <Clientappointment email={email} name={name} doctors={doctors}/>}
+            {!showexam ? <></>: <Clientappointment email={email} name={name} doctors={doctors}/>}
         </div>
     )
 }

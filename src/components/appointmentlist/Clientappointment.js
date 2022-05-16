@@ -2,6 +2,7 @@
 import { NewClientAppoitment } from '../newclientappointment/NewClientAppoitment';
 
 // External imports
+import { FaRegSadTear } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
@@ -26,8 +27,9 @@ export const Clientappointment = ({email, name, doctors}) => {
         <div className='appoitmentlist'>
             {(appointments < 1)||(!appointments) ?
                 (   
-                    <div>
-                        <p>Você ainda não possui nenhuma consulta agendada</p>
+                    <div className='Sem_dados_na_API'>
+                        <h3>Você ainda não possui nenhuma consulta agendada</h3>
+                        <FaRegSadTear size={55} />
                         <NewClientAppoitment email={email} name={name} doctors={doctors}/>
                     </div>
                 )

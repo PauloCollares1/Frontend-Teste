@@ -1,6 +1,9 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+// External imports
+import { FaRegSadTear } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
+
 
 
 export const Doctorappointment = ({crm}) => {
@@ -10,20 +13,21 @@ export const Doctorappointment = ({crm}) => {
     const [appointments, setAppointments] = useState();
 
     useEffect(() => {
-
         axios.get(url_one_doctor)
             .then((response) => {
                 return setAppointments(response.data);
             });
     }, [url_one_doctor]); 
 
-    
-
-
     return (
         <div>
             {(appointments < 1)||(!appointments) ?
-                (<p>Você ainda não possui nenhuma consulta agendada</p>)
+                (
+                    <div className='Sem_dados_na_API'>
+                        <h3>Você ainda não possui nenhuma consulta agendada.</h3>
+                        <FaRegSadTear size={55} />
+                    </div>
+                )
                 :
                 (<div className='appoitmentlist_card_grandpa'>
                     <h3>Dr(a) aqui estão suas consultas agendadas, Bom trabalho!</h3>

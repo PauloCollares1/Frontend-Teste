@@ -19,7 +19,10 @@ export const DoctorForm = () => {
     const[doctors, setDoctors] = useState();
     const[password, setPassword] = useState();
     const[showexam, setShowExam] = useState(false);
-        
+    
+    function grabCrm(event){setCrm(event.target.value)}
+    function grabPassword(event){setPassword(event.target.value)}
+
     useEffect(() => {
         axios.get(url)
             .then((response) => {
@@ -27,29 +30,29 @@ export const DoctorForm = () => {
             });
     }, []); 
 
+    function validadeDoctor(){
+        doctors.map((doctor) => {
+            if(doctor.db_crm === crm && doctor.db_password === password){
+                return setShowExam(true);
+            }       
+        })
+        if(showexam === false){
+            alert('Login ou senha incorretos - Tente novamente');
+        }
+    }
+
     function onSubmit(event){
         event.preventDefault();
         console.log("--------------------")
         console.log("crm: " + crm +' - '+ password)
-        checkUser(doctors, crm, password);
+        validadeDoctor();
     }
-
-    function checkUser(doctors, crm, password){
-        doctors.map((doctor) => {
-            if(doctor.db_crm === crm && doctor.db_password === password){
-                setShowExam(true)
-            }
-        })
-    }
-
-    function grabCrm(event){setCrm(event.target.value)}
-    function grabPassword(event){setPassword(event.target.value)}
     
     return (
         <div className='DoctorForm'>
             <form className='DoctorForm_form' onSubmit={onSubmit}>
-                <input type='text' name='html_crm' className='form_input' placeholder='Seu CRM' onChange={grabCrm}/>
-                <input type='password' name='html_password' className='form_input' placeholder='Sua senha' onChange={grabPassword}/>
+                <input type='text' name='html_crm' className='form_input' placeholder='Seu CRM' onChange={grabCrm} required maxLength='50'/>
+                <input type='password' name='html_password' className='form_input' placeholder='Sua senha' onChange={grabPassword} required maxLength='50'/>
                 <input  type='submit' className='form_buttom' value='Conferir consultas!'/>
                 <Link to='/newdoctor'><input type='submit' className='form_buttom' value='Médico(a) não registrado!' /></Link>
             </form>

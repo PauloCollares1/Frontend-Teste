@@ -2,7 +2,6 @@
 import { PacientForm } from '../../components/pacientForm/PacientForm';
 
 // External imports
-import { Link } from "react-router-dom";
 import React from 'react';
 
 // CSS
@@ -20,7 +19,6 @@ export const Pacient = () => {
       <h3>Aqui você pode verificar suas consultas ou marcar novos exames!</h3>
       <h4>Por favor, se identifique:</h4>
       <PacientForm />
-      <Link to='/'><button>Voltar</button></Link>
     </div>
   )
 }

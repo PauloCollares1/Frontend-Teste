@@ -3,7 +3,6 @@ import { DoctorForm } from '../../components/doctorForm/DoctorForm';
 
 // External imports
 import React from 'react'
-import { Link } from "react-router-dom";
 
 // CSS
 import './Doctor.css';
@@ -19,7 +18,6 @@ export const Doctor = () => {
       <h3>Aqui você pode verificar suas consultas agendadas!</h3>
       <h4>Por favor, se identifique:</h4>
       <DoctorForm />
-      <Link to='/'><button>Voltar</button></Link>
     </div>
   )
 }

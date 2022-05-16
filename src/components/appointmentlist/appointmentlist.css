@@ -28,3 +28,9 @@
     max-width: 400px;
     max-height: 400px;
 }
+.Sem_dados_na_API{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

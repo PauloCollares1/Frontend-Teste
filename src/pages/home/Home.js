@@ -16,7 +16,7 @@ export const Home = () => {
   
   return (
     <div className='Home'>
-        <FontAwesomeIcon icon={faHeartPulse} className="heart" fa-beat beat />
+        <FontAwesomeIcon icon={faHeartPulse} className="heart" fa-beat="true" beat />
         <h1>Seja Bem vindo(a) ao Consultor de exames!</h1>
         <h3>Para começarmos é só escolher uma opção abaixo:</h3>
         <h3>Você é Doutor(a) ou Paciente ?</h3>
